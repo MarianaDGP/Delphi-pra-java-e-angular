@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Auto Test on Save",
+  "description": "Executa testes unitários automaticamente ao salvar arquivos TypeScript do projeto Angular, usando Karma/Jasmine com saída mínima",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*.ts"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Um arquivo TypeScript foi salvo no projeto Angular (cad-filial-web). Execute os testes unitários relacionados usando Karma/Jasmine.\n\nRegras:\n- Use SEMPRE `npm test -- --watch=false --browsers=ChromeHeadless` para rodar os testes uma única vez sem modo watch.\n- Se o arquivo salvo for um arquivo de spec (*.spec.ts), filtre apenas aquele spec com `--include` ou `--spec` se disponível.\n- Se for um arquivo de serviço (*.service.ts), procure o spec correspondente em `src/app/**/*.spec.ts` com nome similar.\n- Se for um componente (*.component.ts), procure o spec do mesmo componente.\n- Reporte apenas FALHAS e o resumo final (passou/falhou/total). Omita logs de sucesso individuais.\n- NÃO inicie o servidor de desenvolvimento. NÃO rode `npm start` ou `ng serve`.\n\nSe não houver spec relacionado ao arquivo salvo:\n- Ative a skill `unit-testing` antes de qualquer ação.\n- Use os templates e regras da skill para criar o arquivo de spec correspondente na mesma pasta do arquivo salvo.\n- Após criar o spec, execute os testes com `npm test -- --watch=false --browsers=ChromeHeadless` e reporte apenas falhas e o resumo final."
+  }
+}

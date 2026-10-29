@@ -1,0 +1,113 @@
+﻿<app-topo></app-topo>
+
+<div class="page-container">
+
+  <!-- ── Card Dados Cadastrais ─────────────────────────────────────────── -->
+  <mat-card>
+    <div class="card-title-bar">
+      <mat-icon style="vertical-align:middle;font-size:18px;margin-right:6px">business</mat-icon>
+      Cadastro de Filiais
+    </div>
+
+    <form [formGroup]="form" autocomplete="off" (ngSubmit)="salvar()">
+
+      <!-- Linha de campos -->
+      <div class="form-row">
+
+        <!-- Código -->
+        <mat-form-field class="field-codigo" appearance="outline">
+          <mat-label>Código</mat-label>
+          <input matInput formControlName="filial"
+                 maxlength="3"
+                 style="text-transform:uppercase"
+                 placeholder="Ex: 001">
+          <mat-error *ngIf="form.get('filial').hasError('required')">Obrigatório</mat-error>
+          <mat-error *ngIf="form.get('filial').hasError('maxlength')">Máx. 3 caracteres</mat-error>
+        </mat-form-field>
+
+        <!-- Descrição -->
+        <mat-form-field class="field-descr" appearance="outline">
+          <mat-label>Descrição</mat-label>
+          <input matInput formControlName="descr"
+                 maxlength="15"
+                 style="text-transform:uppercase"
+                 placeholder="Nome da filial">
+          <mat-error *ngIf="form.get('descr').hasError('required')">Obrigatório</mat-error>
+          <mat-error *ngIf="form.get('descr').hasError('maxlength')">Máx. 15 caracteres</mat-error>
+        </mat-form-field>
+
+        <!-- Ativo -->
+        <div class="field-ativo">
+          <mat-checkbox formControlName="iesAtivo" color="primary">Ativo</mat-checkbox>
+        </div>
+
+      </div>
+
+      <!-- Botões -->
+      <div class="btn-row">
+        <button mat-stroked-button type="button" (click)="novo()">
+          <mat-icon>add</mat-icon> Novo
+        </button>
+        <button mat-stroked-button type="button" (click)="cancelar()">
+          <mat-icon>clear</mat-icon> Cancelar
+        </button>
+        <button mat-raised-button color="primary" type="submit">
+          <mat-icon>save</mat-icon> {{ modoEdicao ? 'Alterar' : 'Incluir' }}
+        </button>
+        <button mat-raised-button color="warn" type="button" (click)="confirmarSair()">
+          <mat-icon>exit_to_app</mat-icon> Sair
+        </button>
+      </div>
+
+    </form>
+  </mat-card>
+
+  <!-- ── Card Grid ─────────────────────────────────────────────────────── -->
+  <mat-card style="margin-top:16px">
+    <div class="card-title-bar">
+      <mat-icon style="vertical-align:middle;font-size:18px;margin-right:6px">list</mat-icon>
+      Filiais Cadastradas
+    </div>
+
+    <div class="table-wrapper">
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z0">
+
+        <!-- Código -->
+        <ng-container matColumnDef="filial">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="col-codigo">Código</th>
+          <td mat-cell *matCellDef="let row" class="col-codigo">{{ row.filial }}</td>
+        </ng-container>
+
+        <!-- Descrição -->
+        <ng-container matColumnDef="descr">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Descrição</th>
+          <td mat-cell *matCellDef="let row">{{ row.descr }}</td>
+        </ng-container>
+
+        <!-- Ativo -->
+        <ng-container matColumnDef="iesAtivo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="col-ativo">Ativo</th>
+          <td mat-cell *matCellDef="let row" class="col-ativo">
+            <mat-icon [style.color]="row.iesAtivo === 'S' ? '#14af60' : '#af1414'"
+                      style="font-size:18px;vertical-align:middle">
+              {{ row.iesAtivo === 'S' ? 'check_circle' : 'cancel' }}
+            </mat-icon>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+            (dblclick)="selecionarLinha(row)"
+            [class.row-selected]="linhaSelecionada === row">
+        </tr>
+
+      </table>
+    </div>
+
+    <p class="table-hint">
+      <mat-icon style="font-size:14px;vertical-align:middle">info</mat-icon>
+      Duplo clique na linha para editar
+    </p>
+  </mat-card>
+
+</div>

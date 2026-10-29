@@ -1,0 +1,164 @@
+﻿@import '~@angular/material/theming';
+
+// Paleta Pamcary (azul #003965)
+$pam-blue: (
+  50:  #e0eaf2,
+  100: #b3c9df,
+  200: #80a5ca,
+  300: #4d81b5,
+  400: #2666a5,
+  500: #003965,
+  600: #003358,
+  700: #002b4a,
+  800: #00233c,
+  900: #001628,
+  A100: #5eb8ff,
+  A200: #2ba5ff,
+  A400: #0091f8,
+  A700: #0082de,
+  contrast: (
+    50:  $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+@include mat-core();
+
+$app-primary: mat-palette($pam-blue, 500);
+$app-accent:  mat-palette($mat-cyan, A200, A100, A400);
+$app-warn:    mat-palette($mat-red);
+$app-theme:   mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Tahoma', sans-serif;
+  font-size: 14px;
+  background: #f5f5f5;
+}
+
+// ── Topo ────────────────────────────────────────────────────────────────────
+.app-topo {
+  background: #003965;
+  color: #fff;
+  padding: 0 16px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+
+  .topo-titulo {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+  }
+
+  .topo-subtitulo {
+    font-size: .75rem;
+    color: #b3c9df;
+    margin-left: 8px;
+  }
+}
+
+// ── Card principal ───────────────────────────────────────────────────────────
+.page-container {
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+mat-card {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card-title-bar {
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 16px;
+  margin: -16px -16px 16px -16px;
+  font-size: .85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #003965;
+  letter-spacing: .5px;
+}
+
+// ── Formulário ───────────────────────────────────────────────────────────────
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.field-codigo  { width: 90px;  flex-shrink: 0; }
+.field-descr   { flex: 1;      min-width: 200px; }
+.field-ativo   { width: 80px;  flex-shrink: 0; display: flex; align-items: center; padding-top: 18px; }
+
+mat-form-field { width: 100%; }
+
+// ── Botões ───────────────────────────────────────────────────────────────────
+.btn-row {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+// ── Tabela ───────────────────────────────────────────────────────────────────
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+table.mat-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mat-header-cell {
+  font-weight: 700;
+  color: #003965;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.mat-row {
+  cursor: pointer;
+  transition: background .15s;
+  &:hover { background: #e8f0f8; }
+  &.row-selected { background: #cce0f5; }
+}
+
+.mat-cell { font-size: .85rem; }
+
+.col-codigo { width: 90px; }
+.col-ativo  { width: 70px; text-align: center; }
+
+// ── Hint rodapé ──────────────────────────────────────────────────────────────
+.table-hint {
+  font-size: .75rem;
+  color: #757575;
+  margin-top: 6px;
+}
+
+// ── Snackbar ─────────────────────────────────────────────────────────────────
+.snack-success .mat-simple-snackbar { color: #fff; }
+.snack-error   .mat-simple-snackbar { color: #fff; }

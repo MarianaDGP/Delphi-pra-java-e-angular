@@ -1,0 +1,8 @@
+com\empresa\cadfilial\CorsConfig.class
+com\empresa\cadfilial\dao\FilialDAO$1.class
+com\empresa\cadfilial\model\Filial.class
+com\empresa\cadfilial\dao\FilialDAO.class
+com\empresa\cadfilial\CadFilialApplication.class
+com\empresa\cadfilial\service\FilialService.class
+com\empresa\cadfilial\controller\FilialController.class
+com\empresa\cadfilial\CorsConfig$1.class

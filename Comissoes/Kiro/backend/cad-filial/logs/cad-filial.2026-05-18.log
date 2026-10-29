@@ -1,0 +1,185 @@
+2026-05-18 15:38:09 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Starting...
+2026-05-18 15:38:10 [AWT-EventQueue-0] ERROR com.zaxxer.hikari.pool.HikariPool - CadFilialPool - Exception during pool initialization.
+java.sql.SQLInvalidAuthorizationSpecException: Incorrect password or user com.informix.asf.IfxASFRemoteException: USUAPLICC@_gateway[NSUPT05287] is not known on the database server.
+	at com.informix.jdbc.IfxSqliConnect.<init>(IfxSqliConnect.java:1345)
+	at com.informix.jdbc.IfxDriver.connect(IfxDriver.java:167)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at com.empresa.cadfilial.config.DatabaseConfig.initDataSource(DatabaseConfig.java:63)
+	at com.empresa.cadfilial.config.DatabaseConfig.<init>(DatabaseConfig.java:28)
+	at com.empresa.cadfilial.config.DatabaseConfig.getInstance(DatabaseConfig.java:34)
+	at com.empresa.cadfilial.dao.FilialDAO.listarTodas(FilialDAO.java:55)
+	at com.empresa.cadfilial.ui.CadFilialForm.carregarFiliais(CadFilialForm.java:252)
+	at com.empresa.cadfilial.ui.CadFilialForm.<init>(CadFilialForm.java:70)
+	at com.empresa.cadfilial.Main$2.run(Main.java:47)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.informix.asf.IfxASFRemoteException: USUAPLICC@_gateway[NSUPT05287]
+	at com.informix.asf.Connection.recvConnectionResponse(Connection.java:589)
+	at com.informix.asf.Connection.establishConnection(Connection.java:1418)
+	at com.informix.asf.Connection.connect(Connection.java:333)
+	at com.informix.asf.Connection.<init>(Connection.java:325)
+	at com.informix.jdbc.IfxSqliConnect.<init>(IfxSqliConnect.java:1248)
+	... 28 common frames omitted
+2026-05-18 15:38:11 [Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Starting...
+2026-05-18 15:38:12 [Thread-0] ERROR com.zaxxer.hikari.pool.HikariPool - CadFilialPool - Exception during pool initialization.
+java.sql.SQLInvalidAuthorizationSpecException: Incorrect password or user com.informix.asf.IfxASFRemoteException: USUAPLICC@_gateway[NSUPT05287] is not known on the database server.
+	at com.informix.jdbc.IfxSqliConnect.<init>(IfxSqliConnect.java:1345)
+	at com.informix.jdbc.IfxDriver.connect(IfxDriver.java:167)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at com.empresa.cadfilial.config.DatabaseConfig.initDataSource(DatabaseConfig.java:63)
+	at com.empresa.cadfilial.config.DatabaseConfig.<init>(DatabaseConfig.java:28)
+	at com.empresa.cadfilial.config.DatabaseConfig.getInstance(DatabaseConfig.java:34)
+	at com.empresa.cadfilial.Main$1.run(Main.java:39)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.informix.asf.IfxASFRemoteException: USUAPLICC@_gateway[NSUPT05287]
+	at com.informix.asf.Connection.recvConnectionResponse(Connection.java:589)
+	at com.informix.asf.Connection.establishConnection(Connection.java:1418)
+	at com.informix.asf.Connection.connect(Connection.java:333)
+	at com.informix.asf.Connection.<init>(Connection.java:325)
+	at com.informix.jdbc.IfxSqliConnect.<init>(IfxSqliConnect.java:1248)
+	... 13 common frames omitted
+2026-05-18 15:39:08 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Starting...
+2026-05-18 15:39:08 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Start completed.
+2026-05-18 15:39:08 [AWT-EventQueue-0] INFO  c.e.cadfilial.config.DatabaseConfig - Pool de conexoes inicializado com sucesso.
+2026-05-18 15:39:09 [AWT-EventQueue-0] INFO  c.empresa.cadfilial.ui.CadFilialForm - Grid carregado com 19 filiais.
+2026-05-18 15:39:09 [AWT-EventQueue-0] INFO  com.empresa.cadfilial.Main - Formulario aberto. Usuario: SISTEMA
+2026-05-18 15:42:52 [AWT-EventQueue-0] INFO  c.empresa.cadfilial.ui.CadFilialForm - Formulario de Cadastro de Filiais encerrado.
+2026-05-18 15:42:54 [Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Shutdown initiated...
+2026-05-18 15:42:54 [Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Shutdown completed.
+2026-05-18 15:42:54 [Thread-0] INFO  c.e.cadfilial.config.DatabaseConfig - Pool de conexoes encerrado.
+2026-05-18 15:42:54 [Thread-0] INFO  com.empresa.cadfilial.Main - Aplicacao encerrada.
+2026-05-18 15:54:14 [main] INFO  c.e.cadfilial.CadFilialApplication - Starting CadFilialApplication using Java 1.8.0_241 on NSUPT05287 with PID 35860 (C:\Fontes\Delphi pra java e angular\Comissoes\Kiro\backend\cad-filial\target\classes started by mariana.pereira in C:\Fontes\Delphi pra java e angular\Comissoes\Kiro\backend\cad-filial)
+2026-05-18 15:54:14 [main] DEBUG c.e.cadfilial.CadFilialApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-05-18 15:54:14 [main] INFO  c.e.cadfilial.CadFilialApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-18 15:54:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-05-18 15:54:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-18 15:54:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-18 15:54:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-05-18 15:54:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-18 15:54:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1188 ms
+2026-05-18 15:54:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-05-18 15:54:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-05-18 15:54:16 [main] INFO  c.e.cadfilial.CadFilialApplication - Started CadFilialApplication in 2.315 seconds (JVM running for 4.428)
+2026-05-18 15:59:45 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2026-05-18 15:59:45 [RMI TCP Connection(14)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-05-18 15:59:45 [RMI TCP Connection(14)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-05-18 15:59:45 [RMI TCP Connection(14)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-05-18 15:59:45 [RMI TCP Connection(14)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:46:01 [main] INFO  c.e.cadfilial.CadFilialApplication - Starting CadFilialApplication using Java 1.8.0_241 on NSUPT05287 with PID 8300 (C:\Fontes\Delphi pra java e angular\Comissoes\Kiro\backend\cad-filial\target\classes started by mariana.pereira in C:\Fontes\Delphi pra java e angular\Comissoes\Kiro\backend\cad-filial)
+2026-05-18 16:46:01 [main] DEBUG c.e.cadfilial.CadFilialApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-05-18 16:46:01 [main] INFO  c.e.cadfilial.CadFilialApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-18 16:46:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-05-18 16:46:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:46:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-18 16:46:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-05-18 16:46:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-18 16:46:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1706 ms
+2026-05-18 16:46:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:46:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-05-18 16:46:04 [main] INFO  c.e.cadfilial.CadFilialApplication - Started CadFilialApplication in 3.094 seconds (JVM running for 5.38)
+2026-05-18 16:46:27 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-18 16:46:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-18 16:46:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-05-18 16:46:27 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Starting...
+2026-05-18 16:46:27 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Start completed.
+2026-05-18 16:46:28 [http-nio-8080-exec-1] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:46:31 [http-nio-8080-exec-2] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [CadFilialPool housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [IfxSqliConnectCleaner-Thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.DelayQueue.poll(Unknown Source)
+ java.util.concurrent.DelayQueue.poll(Unknown Source)
+ com.informix.jdbc.IfxSqliConnect$IfxSqliConnectCleaner.run(IfxSqliConnect.java:645)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Shutdown initiated...
+2026-05-18 16:46:42 [RMI TCP Connection(9)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Shutdown completed.
+2026-05-18 16:47:40 [main] INFO  c.e.cadfilial.CadFilialApplication - Starting CadFilialApplication using Java 1.8.0_241 on NSUPT05287 with PID 39064 (C:\Fontes\Delphi pra java e angular\Comissoes\Kiro\backend\cad-filial\target\classes started by mariana.pereira in C:\Fontes\Delphi pra java e angular\Comissoes\Kiro\backend\cad-filial)
+2026-05-18 16:47:40 [main] DEBUG c.e.cadfilial.CadFilialApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-05-18 16:47:40 [main] INFO  c.e.cadfilial.CadFilialApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-18 16:47:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-05-18 16:47:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:47:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-18 16:47:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-05-18 16:47:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-18 16:47:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1846 ms
+2026-05-18 16:47:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:47:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-05-18 16:47:42 [main] INFO  c.e.cadfilial.CadFilialApplication - Started CadFilialApplication in 3.943 seconds (JVM running for 6.846)
+2026-05-18 16:48:00 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-18 16:48:00 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-18 16:48:00 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-18 16:48:00 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Starting...
+2026-05-18 16:48:00 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Start completed.
+2026-05-18 16:48:01 [http-nio-8080-exec-1] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:48:21 [http-nio-8080-exec-2] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:48:26 [http-nio-8080-exec-3] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:48:45 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [CadFilialPool housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [IfxSqliConnectCleaner-Thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.DelayQueue.poll(Unknown Source)
+ java.util.concurrent.DelayQueue.poll(Unknown Source)
+ com.informix.jdbc.IfxSqliConnect$IfxSqliConnectCleaner.run(IfxSqliConnect.java:645)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Shutdown initiated...
+2026-05-18 16:48:46 [RMI TCP Connection(8)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Shutdown completed.

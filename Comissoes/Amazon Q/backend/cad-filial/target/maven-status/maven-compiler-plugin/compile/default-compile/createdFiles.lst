@@ -1,0 +1,9 @@
+com\cadastro\filial\model\Filial.class
+com\cadastro\filial\model\LogFilial.class
+com\cadastro\filial\controller\GlobalExceptionHandler.class
+com\cadastro\filial\controller\FilialController.class
+com\cadastro\filial\repository\FilialRepository.class
+com\cadastro\filial\repository\LogFilialRepository.class
+com\cadastro\filial\service\FilialService.class
+com\cadastro\filial\CadFilialApplication.class
+com\cadastro\filial\model\FilialRequest.class

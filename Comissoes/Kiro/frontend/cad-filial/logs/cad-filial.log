@@ -1,0 +1,30 @@
+2026-05-18 16:50:46 [main] INFO  c.e.cadfilial.CadFilialApplication - Starting CadFilialApplication v1.0.0 using Java 17.0.18 on NSUPT05287 with PID 8936 (C:\Fontes\Delphi pra java e angular\Comissoes\Kiro\backend\cad-filial\target\cad-filial-1.0.0.jar started by mariana.pereira in C:\Fontes\Delphi pra java e angular\Comissoes\Kiro\frontend\cad-filial)
+2026-05-18 16:50:46 [main] DEBUG c.e.cadfilial.CadFilialApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-05-18 16:50:46 [main] INFO  c.e.cadfilial.CadFilialApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-18 16:50:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-05-18 16:50:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:50:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-18 16:50:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-05-18 16:50:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-18 16:50:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2154 ms
+2026-05-18 16:50:49 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-05-18 16:50:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-05-18 16:50:49 [main] INFO  c.e.cadfilial.CadFilialApplication - Started CadFilialApplication in 4.122 seconds (JVM running for 4.785)
+2026-05-18 16:51:09 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-18 16:51:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-18 16:51:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-18 16:51:09 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Starting...
+2026-05-18 16:51:09 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - CadFilialPool - Start completed.
+2026-05-18 16:51:10 [http-nio-8080-exec-1] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:52:34 [http-nio-8080-exec-3] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:52:49 [http-nio-8080-exec-5] INFO  com.empresa.cadfilial.dao.FilialDAO - Filial 'RJO' alterada.
+2026-05-18 16:52:49 [http-nio-8080-exec-5] DEBUG com.empresa.cadfilial.dao.FilialDAO - Log registrado — filial: 'RJO', acao: 'ALTERACAO'.
+2026-05-18 16:52:49 [http-nio-8080-exec-6] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:53:05 [http-nio-8080-exec-7] INFO  com.empresa.cadfilial.dao.FilialDAO - Filial 'RJO' alterada.
+2026-05-18 16:53:05 [http-nio-8080-exec-7] DEBUG com.empresa.cadfilial.dao.FilialDAO - Log registrado — filial: 'RJO', acao: 'ALTERACAO'.
+2026-05-18 16:53:05 [http-nio-8080-exec-8] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:54:43 [http-nio-8080-exec-10] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:56:22 [http-nio-8080-exec-2] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.
+2026-05-18 16:56:29 [http-nio-8080-exec-3] INFO  com.empresa.cadfilial.dao.FilialDAO - Filial 'RJO' alterada.
+2026-05-18 16:56:29 [http-nio-8080-exec-3] DEBUG com.empresa.cadfilial.dao.FilialDAO - Log registrado — filial: 'RJO', acao: 'ALTERACAO'.
+2026-05-18 16:56:29 [http-nio-8080-exec-4] DEBUG com.empresa.cadfilial.dao.FilialDAO - listarTodas() retornou 19 registros.

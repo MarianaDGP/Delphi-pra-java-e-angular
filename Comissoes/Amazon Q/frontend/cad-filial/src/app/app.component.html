@@ -1,0 +1,119 @@
+<div class="app-wrapper">
+
+  <!-- Topo -->
+  <header class="dashboard-top">
+    <div class="top">
+      <div class="top-container">
+        <div class="product-badge">
+          <div class="badge dw">CF</div>
+          <p class="name">Cadastro de Filiais</p>
+        </div>
+        <div class="logo-area">
+          <span class="app-version">v1.0.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu--horizontal"></div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <div class="main-ui">
+    <div class="product">
+      <div class="product--module">
+
+        <!-- Filtro / Formulário -->
+        <div class="filter">
+          <div class="filter-legend">
+            <span>Manutenção de Filiais</span>
+          </div>
+
+          <div class="form-row">
+
+            <div class="field-group" style="width: 100px">
+              <label>Código</label>
+              <input type="text" [(ngModel)]="codigo" maxlength="3"
+                     [disabled]="modoEdicao" (input)="codigo = codigo.toUpperCase()"
+                     placeholder="EX: MTZ">
+            </div>
+
+            <div class="field-group" style="flex: 1">
+              <label>Descrição</label>
+              <input type="text" [(ngModel)]="descricao"
+                     (input)="descricao = descricao.toUpperCase()"
+                     placeholder="Nome da filial">
+            </div>
+
+            <div class="field-group field-ativo">
+              <label>Ativo</label>
+              <label class="toggle">
+                <input type="checkbox" [(ngModel)]="ativo">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="field-actions">
+              <button class="btn btn-salvar" (click)="salvar()">
+                ✔ {{ modoEdicao ? 'Alterar' : 'Incluir' }}
+              </button>
+              <button class="btn btn-limpar" (click)="limpar()">
+                ✕ Limpar
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mensagem -->
+        <div *ngIf="mensagem" [class]="'mensagem mensagem-' + tipoMensagem">
+          <span>{{ tipoMensagem === 'sucesso' ? '✔' : '✖' }}</span> {{ mensagem }}
+        </div>
+
+        <!-- Grid -->
+        <div class="content-container">
+          <div class="top-bar">
+            <span class="title">Filiais cadastradas</span>
+            <span class="icons footer-count">{{ filiais.length }} registro(s)</span>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="table-pamcary">
+              <thead>
+                <tr>
+                  <th style="width: 100px">Código</th>
+                  <th>Descrição</th>
+                  <th style="width: 80px; text-align:center">Ativo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let f of filiais; let i = index"
+                    (dblclick)="selecionar(f)"
+                    [class.row-alt]="i % 2 !== 0"
+                    class="grid-row">
+                  <td><span class="badge-codigo">{{ f.filial }}</span></td>
+                  <td>{{ f.descr }}</td>
+                  <td style="text-align:center">
+                    <span [class]="f.iesAtivo === 'S' ? 'badge-ativo' : 'badge-inativo'">
+                      {{ f.iesAtivo === 'S' ? 'Sim' : 'Não' }}
+                    </span>
+                  </td>
+                </tr>
+                <tr *ngIf="filiais.length === 0">
+                  <td colspan="3" class="sem-dados">Nenhuma filial cadastrada.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-hint">💡 Duplo clique na linha para editar</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <span>Pamcary ©{{ ano }} — Cadastro de Filiais@1.0.0</span>
+  </footer>
+
+</div>
